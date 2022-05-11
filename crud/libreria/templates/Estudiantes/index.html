@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block titulo %} lista de estudiantes {% endblock %}
+
+{% block contenido %} 
+
+<div class="card">
+    <div class="card-header">
+        <a name="" id="" class="btn btn-success" href="{% url 'crear_estudiante'%}" role="button">Agregar Nuevo Estudiante</a>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Estudiantes</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                <th> Id</th>
+                <th >Nombre</th>
+                <th >Apellido</th>
+                <th >Correo</th>
+                <th >Numero de Identificacion</th>
+                <th >Programa Academico</th>
+                <th >Accion</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for estu in estudiantes %}
+                <tr>
+                    <td>{{estu.id}}</td>
+                    <td>{{estu.nombre}}</td>
+                    <td>{{estu.apellido}}</td>
+                    <td>{{estu.correo}}</td>
+                    <td>{{estu.numero}}</td>
+                    <td>{{estu.id}}</td>
+                    <td><a name="" id="" class="btn btn-info" href="{% url 'editar'%}" role="button">Editar</a>
+                    <a name="" id="" class="btn btn-danger" href="#" role="button">borrar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+    </div>
+    <div class="card-footer text-muted">
+       
+    </div>
+</div>
+
+{% endblock %}
