@@ -6,19 +6,18 @@
 
 <div class="card">
     <div class="card-header">
-        <a name="" id="" class="btn btn-success" href="{% url 'crear_estudiante'%}" role="button">Agregar Nuevo Estudiante</a>
+        <a name="" id="" class="btn btn-success" href="{% url 'crear_estudiante'%}" role="button">Agregar Nuevo profesor</a>
     </div>
     <div class="card-body">
-        <h4 class="card-title">Estudiantes</h4>
+        <h4 class="card-title">Profesor</h4>
         <table class="table">
             <thead>
                 <tr>
                 <th> Id</th>
                 <th >Nombre</th>
-                <th >Apellido</th>
-                <th >Correo</th>
-                <th >Numero de Identificacion</th>
-                <th >Programa Academico</th>
+                <th >Salon</th>
+                <th >Horario</th>
+                <th >Profesor</th>
                 <th >Accion</th>
                 </tr>
             </thead>
@@ -31,8 +30,8 @@
                     <td>{{estu.correo}}</td>
                     <td>{{estu.numero}}</td>
                     <td>{{estu.id}}</td>
-                    <td><a name="" id="" class="btn btn-info" href="{% url 'editar' estu.id %}" role="button">Editar</a>
-                    <a name="" id="" class="btn btn-danger" href="{% url 'eliminar' estu.id %}" role="button">borrar</a>
+                    <td><a name="" id="" class="btn btn-info" href="{% url 'editar'%}" role="button">Editar</a>
+                    <a name="" id="" class="btn btn-danger" href="#" role="button">borrar</a>
                     </td>
                 </tr>
                 {% endfor %}

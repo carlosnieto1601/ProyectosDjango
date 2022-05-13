@@ -3,19 +3,21 @@
 {% block titulo %} agregar nuevo estudiante {% endblock %}
 
 {% block contenido %} 
+<form method="POST">
+    <div class="card">
+        <div class="card-header">
+            Crear un estudiante
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Datos del estudiante</h4>
+            
+            {% include 'estudiantes/form.html' %}
+            
+        </div>
+        <div class="card-footer text-muted">
+        </div>
+    </div>
+</form>
 
-<div class="card">
-    <div class="card-header">
-        Crear un estudiante
-    </div>
-    <div class="card-body">
-        <h4 class="card-title">Datos del estudiante</h4>
-        
-        {% include 'estudiantes/form.html' %}
-        
-    </div>
-    <div class="card-footer text-muted">
-    </div>
-</div>
 
 {% endblock %}
